@@ -1,0 +1,105 @@
+#Card-layout {
+    display: flex;
+    gap: 1.2rem;
+    flex-flow: row wrap;
+    max-width: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+#Card-layout > .Card {
+    overflow: hidden;
+    background-color: #fff;
+    flex-grow: 1;
+    flex-basis: 300px;
+    max-height: max-content;
+}
+
+#Card-layout .Card .Wrapper p {
+    font-size: .85rem;
+    width: fit-content;
+}
+#Card-layout > .Card .Wrapper {
+    padding: 1.5rem 1.2rem;
+}
+#Card-layout > .Card .Wrapper .seeMore {
+    text-decoration: none;
+}
+#Card-layout > .Card .Wrapper .Product-box {
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 1rem 0 2rem 0;
+}
+#Card-layout > .Card .Wrapper .Product-box > * {
+    width: 40%;
+    flex-grow: 1;
+}
+#Card-layout > .Card .Wrapper .Product-box .Product img {
+    width: 100%;
+    aspect-ratio: 1/.8;
+    object-fit: cover;
+    cursor: pointer;
+}
+#Card-layout > .Card .Wrapper .slideshow {
+    width: 60%;
+    margin-inline: auto;
+    padding: 1rem 0 .5rem;
+}
+#Card-layout > .Card .Wrapper .description {
+    font-size: .9rem;
+    padding: .5rem 0;
+}
+#Card-layout > .Card .Wrapper .pricing {
+    font-size: .9rem;
+    padding-bottom: 1rem;
+}
+#Card-layout > .Card .Wrapper .pricing #MRP {
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+#Card-layout > .Card .Wrapper .pricing span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.slideShowImages_controler {
+    display: flex;
+    justify-content: space-between;
+
+}
+.slideShowImages_controler button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    outline: 1px solid rgb(172, 172, 172);
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+.slideShowImages_controler .active-btn {
+    outline: 1px solid coral;
+}
+.slideShowImages_controler button:focus {
+    outline: 1px solid coral;
+    box-shadow: 0 0 10px coral;
+}
+.slideShowImages_controler button img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/* screen breakpoints for card layout  */
+@media (width <= 1150px) {
+    @media (width <= 968px) {
+      #Card-layout > .Card {
+        flex-basis: 280px;
+      }
+      @media(width <= 818px) {
+          #Card-layout > .Card {
+              flex-basis: 240px;
+          }
+      }
+    }
+  }

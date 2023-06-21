@@ -1,0 +1,78 @@
+#card-layout {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  flex-flow: row wrap;
+  max-width: inherit;
+  margin: 0 auto;
+  position: relative;
+  top: -18rem;
+}
+#card-layout > .card {
+  overflow: hidden;
+  background-color: #fff;
+  flex-grow: 1;
+  flex-basis: 300px;
+  max-height: max-content;
+}
+
+#card-layout .card .wrapper p {
+  font-size: 0.85rem;
+  width: fit-content;
+}
+#card-layout > .card .wrapper {
+  padding: 1.5rem 1.2rem;
+}
+#card-layout > .card .wrapper .seeMore {
+  text-decoration: none;
+}
+#card-layout > :nth-child(4) {
+  align-self: flex-start;
+}
+#card-layout > :nth-child(4) .wrapper .product-box button {
+  all: unset;
+  width: 100%;
+  text-align: center;
+  min-height: 2.5rem;
+  background-color: #ffda00;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#card-layout > .card .wrapper .product-box {
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 1rem 0 2rem 0;
+}
+#card-layout > .card .wrapper .product-box > * {
+  width: 40%;
+  flex-grow: 1;
+}
+#card-layout > .card .wrapper .product-box .product img {
+  width: 100%;
+  aspect-ratio: 1/0.8;
+  object-fit: cover;
+  cursor: pointer;
+}
+#card-layout > .card-6 .product-1 img,
+#card-layout > .card-8 .product-1 img {
+  min-height: 250px;
+}
+
+/* screen breakpoints for card layout  */
+@media (width <= 1030px) {
+  #card-layout {
+    top: -3rem;
+  }
+  @media (width <= 968px) {
+    #card-layout > .card {
+      flex-basis: 250px;
+    }
+    @media(width <= 818px) {
+        #card-layout > .card {
+            flex-basis: 200px;
+        }
+    }
+  }
+}

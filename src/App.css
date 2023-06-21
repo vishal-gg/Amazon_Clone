@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Amazon Ember'; 
+    src: url('/public/assets/fonts/Amazon\ Ember.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: my-style, sans-serif;
+}
+html {
+    font-size: 14px;
+}
+.app-container {
+    background-color: rgb(230, 230, 230);
+    min-height: 1000px;
+}
